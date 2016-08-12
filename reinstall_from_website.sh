@@ -5,9 +5,9 @@
 aptitude remove openvswitch-common openvswitch-datapath-dkms openvswitch-controller openvswitch-pki openvswitch-switch -y
 
 #Install new version ovs
-wget http://openvswitch.org/releases/openvswitch-2.3.0.tar.gz
-tar zxvf openvswitch-2.3.0.tar.gz
-cd openvswitch-2.3.0
+wget http://openvswitch.org/releases/openvswitch-$1.tar.gz
+tar zxvf openvswitch-$1.tar.gz
+cd openvswitch-$1
 ./configure --prefix=/usr --with-linux=/lib/modules/`uname -r`/build
 make
 make install
